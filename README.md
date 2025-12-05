@@ -4,13 +4,15 @@
 
 # ⏰ Mini Projects – Clock & To-Do List
 
-A collection of simple beginner-friendly JavaScript projects demonstrating DOM manipulation, time functions, and local storage usage.
+A collection of simple beginner-friendly JavaScript projects demonstrating time display, DOM manipulation, and basic local storage usage.
 
 ---
 
 ## 📌 Projects Included
 
-### 1️⃣ **Digital Clock**
+---
+
+### 1️⃣ **Digital Clock (clock.html)**
 
 A real-time digital clock built using HTML, CSS, and JavaScript.
 
@@ -18,98 +20,61 @@ A real-time digital clock built using HTML, CSS, and JavaScript.
 
 * Displays current **time** and **date**
 * Updates every second
-* Lightweight and responsive design
-
-#### **Technologies**
-
-* HTML
-* CSS
-* JavaScript (`setInterval`, `Date()` API)
+* Simple, clean, and responsive UI
 
 #### **How it Works**
 
-The clock uses JavaScript's `Date()` object to fetch the current date & time and updates the UI every second using `setInterval()`.
-
-#### **Demo Code Snippet**
-
-```javascript
-function updateTime() {
-  const now = new Date();
-  document.getElementById("time").innerText = now.toLocaleTimeString();
-  document.getElementById("date").innerText = now.toLocaleDateString();
-}
-
-setInterval(updateTime, 1000);
-updateTime();
-```
+The clock uses JavaScript’s `Date()` object to fetch and update time every second with `setInterval()`.
 
 ---
 
-### 2️⃣ **To-Do List App**
+### 2️⃣ **To-Do List App (todolist.html)**
 
-A simple task manager that stores tasks in the browser using Local Storage.
+A lightweight task manager that stores tasks directly in the browser using Local Storage.
 
 #### **Features**
 
 * Add new tasks
 * Mark tasks as completed
 * Delete tasks
-* Automatically saves tasks in **Local Storage**
-* Clean and minimal UI
-
-#### **Technologies**
-
-* HTML
-* CSS
-* JavaScript (LocalStorage API)
+* Tasks saved automatically using **LocalStorage**
+* Simple and beginner-friendly interface
 
 #### **How it Works**
 
-Each task is stored inside `localStorage` so the list remains even after refreshing the page.
-
-#### **Demo Code Snippet**
-
-```javascript
-function addTask() {
-  const taskInput = document.getElementById("taskInput");
-  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-  tasks.push(taskInput.value);
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-
-  taskInput.value = "";
-  renderTasks();
-}
-```
+Tasks are saved as an array in the browser’s Local Storage, so they stay even after refreshing the page.
 
 ---
 
 ## 🚀 How to Run the Projects
 
-1. Download or clone the project:
+1. Clone the repository:
 
    ```bash
-   [git clone https://github.com/kart81/mini.git]
+   git clone https://github.com/kart81/mini.git
    ```
-2. Open the project folder
-3. Run any `.html` file directly in your browser
+2. Open the project folder:
+
+   ```bash
+   cd mini
+   ```
+3. Run the project by opening:
+
+   * `clock.html` for the digital clock
+   * `todolist.html` for the to-do list
+
+Just double-click the file or open it in any browser.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-mini-projects/
+mini/
 │
-├── clock/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-└── todo-list/
-    ├── index.html
-    ├── style.css
-    └── script.js
+├── clock.html
+├── todolist.html
+└── README.md
 ```
 
 ---
@@ -118,21 +83,20 @@ mini-projects/
 
 * Add dark/light theme toggle
 * Add analog clock version
-* Add drag-and-drop support for tasks
-* Add deadlines and reminders
+* Add animations or sound effects
+* Add categories or priorities in To-Do List
 
 ---
 
 ## 🤝 Contributing
 
-Feel free to fork this project and improve it! Pull requests are welcome.
+Contributions are welcome!
+Feel free to fork this repo, improve it, and submit a pull request.
 
 ---
 
 ## 📜 License
 
-This project is open-source and available under the MIT License.
+This project is open-source and available under the **MIT License**.
 
 ---
-
-
