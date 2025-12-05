@@ -64,11 +64,24 @@
   function updateTime() {
   const now = new Date();
 
-  const time = now.toLocaleTimeString();
-  const date = now.toLocaleDateString(); // Gets date like 12/05/2025
+  const time = now.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
 
-  document.getElementById("time").innerText = time + " on " + date;
+  const date = now.toLocaleDateString('en-US', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric'
+  });
+
+  document.getElementById("time").innerText = `${time} \n on ${date}`;
 }
+
+setInterval(updateTime, 1000);
+updateTime();
+
 
 setInterval(updateTime, 1000);
 updateTime();
