@@ -89,7 +89,7 @@ function addTask() {
 1. Download or clone the project:
 
    ```bash
-   git clone https://github.com/your-username/mini-projects.git
+   [git clone https://github.com/kart81/mini.git]
    ```
 2. Open the project folder
 3. Run any `.html` file directly in your browser
